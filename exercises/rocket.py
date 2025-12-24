@@ -13,7 +13,7 @@ class Rocket:
         self.moving_down = False
 
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('alien_invasion/images/ship.bmp')
+        self.image = pygame.image.load('alien_invasion/images/rocket.png')
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen.
