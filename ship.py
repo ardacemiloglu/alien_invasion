@@ -13,7 +13,7 @@ class Ship:
         self.moving_left = False
 
         # Load the ship image and get its rect.
-        self.image = pygame.image.load('alien_invasion\images\ship.bmp')
+        self.image = pygame.image.load('alien_invasion/images/ship.bmp')
         self.rect = self.image.get_rect()
 
         # Start each new ship at the bottom center of the screen.
@@ -25,9 +25,9 @@ class Ship:
     def update(self):
         """Update the ship's position based on the movement flag."""
         # Update the ship's x value, not the rect.
-        if self.moving_right:
+        if self.moving_right and self.rect.right < self.screen_rect.right:
             self.x += self.settings.ship_speed
-        elif self.moving_left:
+        elif self.moving_left and self.rect.left > 0:
             self.x -= self.settings.ship_speed
 
         # Update rect object from self.x.
