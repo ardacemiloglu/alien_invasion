@@ -3,9 +3,9 @@ import pygame
 class Ship:
     """A class to manage the ship."""
 
-    def __init__(self, ai_game):  #ai_game is passed to INHERIT the attributes like the screen rectangle etc.
-        """Initialize the ship and set its starting position."""
-        self.screen = ai_game.screen
+    def __init__(self, ai_game):  #ai_game is passed to be able to be initiated 
+        """Initialize the ship and set its starting position.""" #inside the main game 
+        self.screen = ai_game.screen                             #initiation and also use the attributes that come ith the main initiation.
         self.screen_rect = ai_game.screen.get_rect()
         self.settings = ai_game.settings
 
